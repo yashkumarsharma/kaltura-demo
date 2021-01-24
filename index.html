@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdnapisec.kaltura.com/p/2905821/sp/290582100/embedIframeJs/uiconf_id/45955601/partner_id/2905821"></script>
+    <style>
+html {
+  background: #161618;
+}
+div {
+  color: white;
+  /* background: red; */
+  /* padding: 15px; */
+  /* position: absolute; */
+  /* top: 50%; */
+  /* left: 50%; */
+  /* -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%); */
+}
+div.title {
+  text-align: center;
+  font-size: 60px;
+}
+    </style>
+  </head>
+<body>
+    <br />
+    <br />
+    <div class='title'></div>
+    <br />
+    <br />
+  <div id="kaltura_player_1593341230" style="width: 100%; height: 540px;"></div>
+  <script>
+    kWidget.embed({
+      "targetId": "kaltura_player_1593341230",
+      "wid": "_2905821",
+      "uiconf_id": 45955601,
+      "flashvars": {},
+      "cache_st": 1593341230,
+      "entry_id": "1_bx949ifl",
+      "params": {
+        url: "asd",
+        sources : {
+          wmode: "transparent",
+          url: "asd"
+        }
+      }
+    });
+
+    var parseQueryString = function( queryString ) {
+      var params = {}, queries, temp, i, l;
+  
+      // Split into key/value pairs
+      queries = queryString.split("&");
+  
+      // Convert the array of strings into an object
+      for ( i = 0, l = queries.length; i < l; i++ ) {
+          temp = queries[i].split('=');
+          params[temp[0]] = temp[1];
+      }
+  
+      return params;
+    };
+    var queryString = window.location.search;
+    queryString = queryString.substring(1);
+    const params = parseQueryString(queryString);
+    var elem = document.querySelector('.title');
+    elem.innerHTML = params.title ? decodeURIComponent(params.title) : ''
+  </script>
+  </body>
+</html>
